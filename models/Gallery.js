@@ -7,6 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 var Gallery = new keystone.List('Gallery', {
+	label:'图片',
 	autokey: { from: 'name', path: 'key', unique: true },
 });
 
