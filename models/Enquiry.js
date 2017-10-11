@@ -17,9 +17,9 @@ Enquiry.add({
 	email: { type: Types.Email, label:'邮件', required: true },
 	phone: { type: String, label:'手机'},
 	enquiryType: { type: Types.Select,label:'类型',  options: [
-		{ value: 'message', label: 'Just leaving a message' },
-		{ value: 'question', label: 'I\'ve got a question' },
-		{ value: 'other', label: 'Something else...' },
+		{ value: 'message', label: '仅仅留言' },
+		{ value: 'question', label: '我有一个问题' },
+		{ value: 'other', label: '其他' },
 	] },
 	message: { type: Types.Markdown,label:'信息', required: true },
 	createdAt: { type: Date, label:'创建日期', default: Date.now },
