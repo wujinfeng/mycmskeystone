@@ -12,17 +12,25 @@ var Post = new keystone.List('Post', {
 	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
-Post.add({
-	title: { type: String, required: true },
-	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
-	author: { type: Types.Relationship, ref: 'User', index: true },
-	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	image: { type: Types.CloudinaryImage },
-	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 },
-		extended: { type: Types.Html, wysiwyg: true, height: 400 },
+var myStorage = new keystone.Storage({
+	adapter: keystone.Storage.Adapters.FS,
+	fs: {
+		path: 'data/files',
+		publicPath: '/files',
 	},
-	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
+});
+
+Post.add({
+	title: { type: String, label:'标题',required: true },
+	state: { type: Types.Select, label:'状态', options: 'draft, published, archived', default: 'draft', index: true },
+	author: { type: Types.Relationship, label:'作者', ref: 'User', index: true },
+	publishedDate: { type: Types.Date, label:'发布日期', index: true, dependsOn: { state: 'published' } },
+	image: { type: Types.File,label:'图片', storage: myStorage },
+	content: {
+		brief: { type: Types.Html, label:'简介', wysiwyg: true, height: 150 },
+		extended: { type: Types.Html, label:'内容', wysiwyg: true, height: 400 },
+	},
+	categories: { type: Types.Relationship, label:'分类',ref: 'PostCategory', many: true },
 });
 
 Post.schema.virtual('content.full').get(function () {

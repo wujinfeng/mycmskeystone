@@ -11,7 +11,7 @@ var PostCategory = new keystone.List('PostCategory', {
 });
 
 PostCategory.add({
-	name: { type: String, required: true },
+	name: { type: String, label:'名称', required: true },
 });
 
 PostCategory.relationship({ ref: 'Post', path: 'posts', refPath: 'categories' });

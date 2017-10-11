@@ -11,11 +11,20 @@ var Gallery = new keystone.List('Gallery', {
 	autokey: { from: 'name', path: 'key', unique: true },
 });
 
+var myStorage = new keystone.Storage({
+	adapter: keystone.Storage.Adapters.FS,
+	fs: {
+		path: 'data/files',
+		publicPath: '/files',
+	},
+});
+
 Gallery.add({
-	name: { type: String, required: true },
-	publishedDate: { type: Date, default: Date.now },
-	heroImage: { type: Types.CloudinaryImage },
-	images: { type: Types.CloudinaryImages },
+	name: { type: String, label:'名称', required: true },
+	publishedDate: { type: Date, label:'发布日期', default: Date.now },
+	//heroImage: { type: Types.CloudinaryImage },
+	//images: { type: Types.CloudinaryImages },
+	images: { type: Types.File,label:'图片', storage: myStorage },
 });
 
 Gallery.register();

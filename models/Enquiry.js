@@ -13,16 +13,16 @@ var Enquiry = new keystone.List('Enquiry', {
 });
 
 Enquiry.add({
-	name: { type: Types.Name, required: true },
-	email: { type: Types.Email, required: true },
-	phone: { type: String },
-	enquiryType: { type: Types.Select, options: [
+	name: { type: Types.Name, label:'名称', required: true },
+	email: { type: Types.Email, label:'邮件', required: true },
+	phone: { type: String, label:'手机'},
+	enquiryType: { type: Types.Select,label:'类型',  options: [
 		{ value: 'message', label: 'Just leaving a message' },
 		{ value: 'question', label: 'I\'ve got a question' },
 		{ value: 'other', label: 'Something else...' },
 	] },
-	message: { type: Types.Markdown, required: true },
-	createdAt: { type: Date, default: Date.now },
+	message: { type: Types.Markdown,label:'信息', required: true },
+	createdAt: { type: Date, label:'创建日期', default: Date.now },
 });
 
 Enquiry.schema.pre('save', function (next) {
