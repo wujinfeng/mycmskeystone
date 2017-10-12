@@ -14,7 +14,7 @@ User.add({
 	email: { type: Types.Email, label:'邮件', initial: true, required: true, unique: true, index: true },
 	password: { type: Types.Password, label:'密码', initial: true, required: true },
 }, 'Permissions', {
-	isAdmin: { type: Boolean, label: '管理员?', index: true },
+	isAdmin: { type: Boolean, label: '管理员', index: true },
 });
 
 // Provide access to Keystone
