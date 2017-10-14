@@ -32,14 +32,29 @@ var routes = {
 };
 
 // Setup Route Bindings
+/*
+ { label: '首页', key: 'home', href: '/' },
+ { label: '菜单', key: 'menu', href: '/menu' },
+ { label: '位置', key: 'location', href: '/location' },
+ { label: '博客', key: 'blog', href: '/blog' },
+ { label: '预订', key: 'contact', href: '/contact' },
+ { label: '职员', key: 'staff', href: '/staff' },
+ { label: '资讯', key: 'news', href: '/news' },
+ { label: '美食', key: 'gallery', href: '/gallery' },
+* */
 exports = module.exports = function (app) {
 	// Views
-	app.get('/', routes.views.index);
+	app.get('/', routes.views.index);  
+	app.get('/menu', routes.views.menu);   
+	app.get('/location', routes.views.location);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
-
+	app.get('/staff', routes.views.staff);
+	app.get('/news', routes.views.news);
+	app.get('/gallery', routes.views.gallery);
+	
+	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 

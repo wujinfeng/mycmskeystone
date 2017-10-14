@@ -15,7 +15,7 @@ var Post = new keystone.List('Post', {
 var myStorage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
-		path: 'data/files',
+		path: 'public/files',
 		publicPath: '/files',
 	},
 });

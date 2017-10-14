@@ -16,13 +16,21 @@ var _ = require('lodash');
 	The included layout depends on the navLinks array to generate
 	the navigation in the header, you may wish to change this array
 	or replace it with your own templates / logic.
+ { label: '首页', key: 'home', href: '/' },
+ { label: '菜单', key: 'blog', href: '/blog' },
+ { label: '图片', key: 'gallery', href: '/gallery' },
+ { label: '联系我们', key: 'contact', href: '/contact' },
 */
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		{ label: '首页', key: 'home', href: '/' },
-		{ label: '文章', key: 'blog', href: '/blog' },
-		{ label: '图片', key: 'gallery', href: '/gallery' },
-		{ label: '联系我们', key: 'contact', href: '/contact' },
+		{ label: '菜单', key: 'menu', href: '/menu' },
+		{ label: '位置', key: 'location', href: '/location' },
+		{ label: '博客', key: 'blog', href: '/blog' },
+		{ label: '留言', key: 'contact', href: '/contact' },
+		{ label: '职员', key: 'staff', href: '/staff' },
+		{ label: '资讯', key: 'news', href: '/news' },
+		{ label: '美食', key: 'gallery', href: '/gallery' },
 	];
 	res.locals.user = req.user;
 	next();

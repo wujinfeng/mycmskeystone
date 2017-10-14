@@ -14,7 +14,7 @@ var Gallery = new keystone.List('Gallery', {
 var myStorage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
-		path: 'data/files',
+		path: 'public/files',
 		publicPath: '/files',
 	},
 });

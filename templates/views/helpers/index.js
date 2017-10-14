@@ -326,5 +326,14 @@ module.exports = function () {
 		return obj._[underscoreMethod].format();
 	};
 
+	//注册一个Handlebars Helper,用来将索引+1，因为默认是从0开始的
+	_helpers.addOne = function(index){
+	   return parseInt(index)+1;
+	};
+	//注册一个本地图片转化展示
+	_helpers.handleImgShow = function(filename){
+		return '/files/'+filename;
+	};
+
 	return _helpers;
 };
