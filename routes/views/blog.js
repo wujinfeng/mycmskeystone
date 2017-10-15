@@ -14,6 +14,7 @@ exports = module.exports = function (req, res) {
 	locals.data = {
 		posts: [],
 		categories: [],
+		latestPosts: []
 	};
 
 	// Load all categories
@@ -53,10 +54,9 @@ exports = module.exports = function (req, res) {
 			next();
 		}
 	});
-
+		
 	// Load the posts
 	view.on('init', function (next) {
-
 		var q = keystone.list('Post').paginate({
 			page: req.query.page || 1,
 			perPage: 10,
@@ -77,6 +77,15 @@ exports = module.exports = function (req, res) {
 			next(err);
 		});
 	});
+	// Load other latest new posts
+	view.on('init', function (next) {
+		var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit(4);
+		q.exec(function (err, results) {
+			locals.data.latestPosts = results;
+			next(err);
+		});
+	});
+	
 
 	// Render the view
 	view.render('blog');

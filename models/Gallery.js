@@ -22,8 +22,7 @@ var myStorage = new keystone.Storage({
 Gallery.add({
 	name: { type: String, label:'名称', required: true },
 	publishedDate: { type: Date, label:'发布日期', default: Date.now },
-	//heroImage: { type: Types.CloudinaryImage },
-	//images: { type: Types.CloudinaryImages },
+	//heroImage: { type: Types.File,label:'主图片', storage: myStorage },
 	images: { type: Types.File,label:'图片', storage: myStorage },
 });
 

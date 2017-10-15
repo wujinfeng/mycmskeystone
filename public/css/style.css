@@ -194,7 +194,8 @@ footer .wrap-footer:after{
 footer a{color:#92907C;}
 footer span{font-weight: bold;font-size: 18px;}
 footer h4{color: #442917;text-shadow: 1px 1px 1px #FFFFFF;font-size: 16px; text-transform: uppercase;margin: 15px 0;}
-footer .wrap-map{background: #fff;padding: 5px;border: 1px solid #bbb;max-width: 320px;}
+footer .wrap-map{max-width: 320px;}
+footer .wrap-map img{clear:both;}
 footer  img{border: 1px solid #bbb;display: inline-block;padding: 5px;float:left;margin-right: 10px;}
 
 .copyright{margin-bottom: 30px;}
