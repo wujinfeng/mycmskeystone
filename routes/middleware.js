@@ -27,10 +27,10 @@ exports.initLocals = function (req, res, next) {
 		{ label: '菜单', key: 'menu', href: '/menu' },
 		{ label: '位置', key: 'location', href: '/location' },
 		{ label: '博客', key: 'blog', href: '/blog' },
-		{ label: '留言', key: 'contact', href: '/contact' },
 		{ label: '职员', key: 'staff', href: '/staff' },
-		{ label: '资讯', key: 'news', href: '/news' },
 		{ label: '美食', key: 'gallery', href: '/gallery' },
+		{ label: '联系我们', key: 'contact', href: '/contact' },
+		{ label: '企业介绍', key: 'news', href: '/news' },
 	];
 	res.locals.user = req.user;
 	next();

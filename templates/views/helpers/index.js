@@ -334,6 +334,6 @@ module.exports = function () {
 	_helpers.handleImgShow = function(filename){
 		return '/files/'+filename;
 	};
-
+	
 	return _helpers;
 };

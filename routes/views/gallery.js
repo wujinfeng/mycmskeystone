@@ -9,7 +9,7 @@ exports = module.exports = function (req, res) {
 	locals.section = 'gallery';
     //console.log(keystone.list('Gallery').model.find().sort('sortOrder'));
 	// Load the galleries by sortOrder
-	view.query('galleries', keystone.list('Gallery').model.find().sort('sortOrder'));
+	view.query('galleries', keystone.list('Gallery').model.find({'type':'food'}).sort('sortOrder'));
 
 	// Render the view
 	view.render('gallery');
