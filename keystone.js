@@ -13,7 +13,7 @@ var handlebars = require('express-handlebars');
 keystone.init({
 	'name': '韩大地',
 	'brand': '韩大地自助烧烤城',
-
+	'port': 3010,
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
