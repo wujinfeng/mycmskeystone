@@ -20,6 +20,9 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': '.hbs',
 
+	'wysiwyg images':true,
+	
+	
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
