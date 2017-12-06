@@ -19,10 +19,8 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
+	'wysiwyg images': true,
 
-	'wysiwyg images':true,
-	
-	
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
@@ -32,7 +30,7 @@ keystone.init({
 	}).engine,
 
 	'emails': 'templates/emails',
-	'mongo':'219.142.131.131:27321',
+	'mongo': '219.142.131.131:27321',
 	'auto update': true,
 	'session': true,
 	'auth': true,

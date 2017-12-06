@@ -45,7 +45,7 @@ a{
 }
 
 
-h1, h2 	{font-size: 25px;line-height: 25px;}
+h1, h2 	{font-size: 20px;line-height: 30px;}
 h3, h4	{font-size: 20px;line-height: 20px;}
 h5, h6	{font-size: 16px;line-height: 16px;}
 
@@ -66,7 +66,7 @@ section:after, section:before{clear: both; content: '\0020'; display: block; vis
 /* ------------------------------------Html-Body------------------------------- */
 /* ---------------------------------------------------------------------------- */
 html, body {width:100%; padding:0; margin:0;}
-body {background: #292522 url(../images/bg.png) repeat center center;color: #3F3F3F;font: 16px/25px Arial, Helvetica, sans-serif;font-family: 'Goudy Bookletter 1911',Georgia,serif;}
+body {background: #292522 url(../images/bg.png) repeat center center;color: #3F3F3F;font: 16px/25px Arial, Helvetica, sans-serif;font-family: '微软雅黑','Microsoft YaHei',Georgia,serif;}
 body .wrap-body{}
 
 /* --Line-- */
@@ -77,8 +77,8 @@ hr.line { margin: 25px auto 15px; padding: 0; max-width: 80px;border: 0; border-
 .top { color:#fff;background: #000;}
 .top p{display:inline-block;}
 .top ul li {display: inline-block;padding-right: 7px;}
-.top .mail p{background: url(../images/Mail.png) no-repeat 4px 2px;color:#fff;padding-left: 33px;font-size:15px;}
-.top .phone p{background: url(../images/Phone.png) no-repeat 4px 2px;color:#fff;padding-left: 33px;font-size:15px;}
+.top .mail p{background: url(../images/Mail.png) no-repeat 4px 2px;color:#fff;padding-left: 30px;font-size:14px;}
+.top .phone p{background: url(../images/Phone.png) no-repeat 4px 2px;color:#fff;padding-left: 30px;font-size:14px;}
 .top ul.top-social {margin: 5px 7px 0 0;}
 .top ul.top-social li a{padding: 8px 10px;display: block;width: 35px;height: 35px;border-radius: 50%;font-size: 19px;line-height: 40px;color: #ffffff;background: #E4000D;}
 .top ul.top-social li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active{opacity: 0.7;}
@@ -112,7 +112,7 @@ header{background: #E4000D url(../images/bg-header.png) repeat;padding:15px 0;}
 .content-box {padding-bottom: 30px; position: relative;}
 .content-box .box-item {}
 .content-box .header {text-align: center;margin-top: 30px; padding: 5px 30px; }
-.content-box .header h2{font-size: 40px; letter-spacing: 3px;}
+.content-box .header h2{font-size: 20px; letter-spacing: 3px;}
 
 .content-box.box-1 {text-align: center;}
 .content-box.box-1 .box-item{-webkit-box-shadow: 0px 25px 18px -26px rgba(0,0,0,0.75);-moz-box-shadow: 0px 25px 18px -26px rgba(0,0,0,0.75);box-shadow: 0px 25px 18px -26px rgba(0,0,0,0.75);padding:20px 0px;}
@@ -326,7 +326,7 @@ a.button.bt2 {}
 .crumbs {-webkit-box-shadow: 0px 25px 18px -26px rgba(0,0,0,0.75);-moz-box-shadow: 0px 25px 18px -26px rgba(0,0,0,0.75);box-shadow: 0px 25px 18px -26px rgba(0,0,0,0.75);padding:20px 0 20px 30px;}
 .crumbs ul {list-style: none;display: inline-table;}
 .crumbs ul li {display: inline;}
-.crumbs ul li a {display: block;float: left;background: #654e2d;text-align: center;padding: 7px 30px 8px 50px;position: relative;margin: 0 20px 0 0; font-size: 20px;text-decoration: none;color: #ddd;}
+.crumbs ul li a {display: block;float: left;background: #654e2d;text-align: center;padding: 7px 25px 8px 36px;position: relative;margin: 0 6px 0 0; font-size: 20px;text-decoration: none;color: #ddd;}
 .crumbs ul li a:after {content: "";  border-top: 20px solid transparent;border-bottom: 20px solid transparent;border-left: 20px solid #654e2d;position: absolute; right: -20px; top: 0;z-index: 1;-webkit-transition: border 0.3s, -webkit-transform 0.3s;-moz-transition: border 0.3s, -moz-transform 0.3s;-o-transition: border 0.3s, -o-transform 0.3s;transition: border 0.3s, transform 0.3s;}
 .crumbs ul li a:before {content: "";  border-top: 20px solid transparent;border-bottom: 20px solid transparent;border-left: 20px solid #fff;position: absolute; left: 0; top: 0;}
 .crumbs ul li:first-child a {border-top-left-radius: 6px; border-bottom-left-radius: 6px;}
@@ -399,3 +399,15 @@ a.button.bt2 {}
 .zoom-container:hover .zoom-caption {
 	background: none;
 }		
+@media screen and (max-width: 360px) {
+	.top .mail p, .top .phone p {
+		padding-left: 24px;
+	}
+	.top ul li {
+		padding-right: 0;
+	}
+	.top ul.top-social {
+		margin: 5px 0 0 0;
+	}
+	
+}

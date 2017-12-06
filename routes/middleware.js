@@ -24,11 +24,11 @@ var _ = require('lodash');
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		{ label: '首页', key: 'home', href: '/' },
+		{ label: '美食', key: 'gallery', href: '/gallery' },
 		{ label: '菜单', key: 'menu', href: '/menu' },
 		{ label: '位置', key: 'location', href: '/location' },
-		{ label: '博客', key: 'blog', href: '/blog' },
 		{ label: '职员', key: 'staff', href: '/staff' },
-		{ label: '美食', key: 'gallery', href: '/gallery' },
+		{ label: '博客', key: 'blog', href: '/blog' },
 		{ label: '联系我们', key: 'contact', href: '/contact' },
 		{ label: '企业介绍', key: 'news', href: '/news' },
 	];
